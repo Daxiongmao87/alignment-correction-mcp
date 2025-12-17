@@ -1,0 +1,7 @@
+node_modules
+.env
+vector_store.json
+vector_store_*.json
+test_*.js
+run_*.js
+dummy_globals.txt
