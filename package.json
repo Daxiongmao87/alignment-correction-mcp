@@ -1,5 +1,5 @@
 {
-  "name": "alignment_mcp",
+  "name": "alignment-correction-mcp",
   "version": "1.0.0",
   "description": "MCP server for checking AI alignment using Gemini",
   "main": "index.js",

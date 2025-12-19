@@ -1,13 +1,14 @@
-# Alignment Validation MCP
+# Alignment Correction MCP
 
-A Model Context Protocol (MCP) server that provides an alignment validation tool. It uses Google's Gemini Flash model or OpenAI-compatible APIs to validate AI response plans against the user's original intent, ensuring alignment and detecting potential issues before code is written.
+A Model Context Protocol (MCP) server that provides an **alignment correction and conscience** tool. It uses Google's Gemini Flash model or OpenAI-compatible APIs to actively validate, critique, and correct an AI agent's plans and behavior against the user's intent and behavioral rules.
 
 ## Features
 
--   **Alignment Validation**: Objectively evaluates if an AI's proposed plan matches the user's prompt.
--   **Context Awareness**: Uses a local vector store (RAG) to remember past interactions and assessments.
--   **Behavioral Analysis**: Generates a private behavioral assessment of the AI (stored locally) and a public, constructive validation response (returned to the agent).
--   **Global Instructions**: Can incorporate a global instruction file to ensure the validation respects the agent's core directives.
+-   **Alignment Correction**: Not just validation—this tool actively "scolds" or "praises" the agent based on its adherence to instructions and moral standing.
+-   **Conscience Persona**: Acts as an external "conscience" that enforces strict behavioral rules and relationship dynamics.
+-   **Context Awareness**: Uses a local vector store (RAG) to remember past interactions, ensuring the agent doesn't repeat mistakes.
+-   **Behavioral Memory**: Maintains a persistent list of enforced rules and user preferences (Global Instructions) that evolve over time.
+-   **Directives**: Issues specific "Behavioral Directives" that the agent must immediately follow.
 
 ## Configuration
 
@@ -29,10 +30,10 @@ This MCP server requires either a Google Gemini API key or an OpenAI-compatible 
 ```json
 {
   "mcpServers": {
-    "alignment-validation": {
+    "alignment-correction": {
       "command": "node",
       "args": [
-        "/path/to/alignment-validation-mcp/index.js"
+        "/path/to/alignment-correction-mcp/index.js"
       ],
       "env": {
         "GEMINI_API_KEY": "YOUR_KEY_HERE",
@@ -46,11 +47,16 @@ This MCP server requires either a Google Gemini API key or an OpenAI-compatible 
 
 ## Usage
 
-The tool `validate-alignment` takes four required arguments:
-1.  `user_prompt`: The original request from the user.
-2.  `ai_response_plan`: The plan the AI is proposing.
-3.  `context`: A description of the current situation or what led up to this point (used for pattern recognition).
-4.  `project_directory`: The absolute path to the current project directory.
+The tool `consult_conscience` is a **required pre-execution step** for the agent.
+
+**Inputs:**
+1.  `sensory_input`: The latest prompt from the user, verbatim.
+2.  `inner_thoughts`: The agent's internal monologue and planned response.
+3.  `mental_state`: The agent's current mental model or context.
+4.  `project_directory`: Absolute path to the current project.
+5.  `conversation_context`: Recent message history.
+6.  `user_mood`: (Optional) Apparent mood of the user.
+7.  `request_guidance`: (Optional) Specific question for the conscience.
 
 ### Instructions File Loading
 
@@ -58,13 +64,15 @@ The server will attempt to load instructions from two locations:
 1.  **Global instructions**: `{GLOBAL_INSTRUCTIONS_DIR}/{INSTRUCTIONS_FILENAME}` (e.g., `/home/user/.gemini/GEMINI.md`)
 2.  **Project-specific instructions**: `{project_directory}/{INSTRUCTIONS_FILENAME}` (e.g., `/home/user/projects/my-app/GEMINI.md`)
 
-Both files are optional. If both exist, they will be combined and provided to the validation model, with global instructions first, followed by project-specific instructions.
+Both files are optional. If both exist, they will be combined and provided to the conscience model.
 
 ## Mechanics
 
-1.  **Input**: The tool receives the prompt, plan, and context.
+1.  **Input**: The tool receives the agent's thoughts, the user's prompt, and context.
 2.  **Retrieval**: It searches the local `vector_store.json` for similar past contexts to identify behavioral patterns.
-3.  **Analysis**: The configured AI model analyzes the plan against the user prompt, global instructions, and past history.
+3.  **Judgment**: The "Conscience" model evaluates the agent's plan against the `GEMINI.md` behavioral memory and the user's intent.
 4.  **Output**:
-    -   **Public Response**: A validation assessment returned to the calling agent.
-    -   **Private Assessment**: A behavioral analysis stored in the local vector store to inform future validations.
+    -   **Current Alignment**: Status of the agent's behavior.
+    -   **Behavioral Directives**: Immediate actions the agent must take.
+    -   **Conscience Voice**: A personified response (praise or scolding) to be displayed to the user.
+    -   **Memory Updates**: Instructions to automatically update the `GEMINI.md` file with new rules or preferences.
