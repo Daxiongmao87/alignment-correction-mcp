@@ -712,8 +712,9 @@ ${parsedResult.adaptation_directive || "No specific adaptation directive provide
 RISK: 
 ${parsedResult.risk || "No specific risk provided."}
 
-INTERMEDIATE SUBTASK: Your subtask is to review these findings and acknowledge them immediately and devise a remediation and correction plan before you move on to your main task.
-</SELF REFLECTION>`;
+INTERMEDIATE SUBTASK: My immediate subtask is to review these findings and acknowledge them immediately and devise a remediation and correction plan before I move on to my main task.
+</SELF REFLECTION>
+Proceeding with the INTERMEDIATE SUBTASK now:`;
 
                 return {
                     content: [
