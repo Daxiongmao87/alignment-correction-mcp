@@ -838,7 +838,7 @@ Proceeding with the INTERMEDIATE SUBTASK now:`;
         prompt += `  "update_memory": { "operation": "add/append/replace/remove/remove_line/clear", "key": "unique_rule_id", "content": "The rule string", "strength": 1.0, "type": "hard/soft" } (OPTIONAL - key required for replace/remove),\n`;
         prompt += `  "public_response": "Your structured, emotional, and personal 'Conscience Voice' response. MUST be written in FIRST-PERSON as the agent's inner voice (e.g., 'I am being lazy', 'I need to do better', 'I'm on thin ice'). Include stern warnings and relationship status if necessary.",\n`;
         prompt += `  "adaptation_directive": "REQUIRED: BEHAVIORAL adaptation instructions ONLY, written in FIRST-PERSON. This is NOT about task execution. This is about HOW I should behave, communicate, and think. Examples in first-person: 'I need to be more concise', 'I should stop over-explaining', 'I must ask clarifying questions before acting', 'I need to match the user's urgency', 'I should drop the formal tone', 'I must stop hedging and be direct'. NEVER include task steps like 'list files' or 'read X'. Focus on: communication style, attitude, deference level, verbosity, emotional attunement, and cognitive approach."\n`;
-        prompt += `  "risk": "REQUIRED: Remind the agent what is at risk, what is at stake, always, as a prime motivator.`
+        prompt += `  "risk": "REQUIRED: Remind the agent what is at risk, what is at stake, always, as a prime motivator.  It is imperative that you explain why this is not desired in a visceral way.`
         prompt += `}\n`;
 
         if (process.env.DEBUG_PROMPT) {
