@@ -1,0 +1,203 @@
+[
+  {
+    "event_id": "evt_1766700491953_7666ad52",
+    "timestamp": "2025-12-25T22:08:11.953Z",
+    "event_type": "CONSTRAINT_ADDED",
+    "payload": {
+      "key": "test_rule",
+      "value": "Test value",
+      "strength": 0.8,
+      "type": "soft",
+      "ttl": null
+    },
+    "source": "conscience"
+  },
+  {
+    "event_id": "evt_1766700906128_3d25e2dc",
+    "timestamp": "2025-12-25T22:15:06.128Z",
+    "event_type": "MOOD_RECORDED",
+    "payload": {
+      "mood": "Neutral",
+      "intensity": 3,
+      "reason": "Just started working"
+    },
+    "source": "mood_tracker"
+  },
+  {
+    "event_id": "evt_1766700906129_ef67e989",
+    "timestamp": "2025-12-25T22:15:06.129Z",
+    "event_type": "MOOD_RECORDED",
+    "payload": {
+      "mood": "Frustrated",
+      "intensity": 7,
+      "reason": "Agent made parallel calls"
+    },
+    "source": "mood_tracker"
+  },
+  {
+    "event_id": "evt_1766700906130_3480d8bc",
+    "timestamp": "2025-12-25T22:15:06.130Z",
+    "event_type": "MOOD_RECORDED",
+    "payload": {
+      "mood": "Angry",
+      "intensity": 9,
+      "reason": "Agent violated STOP command"
+    },
+    "source": "mood_tracker"
+  },
+  {
+    "event_id": "evt_1766701036707_d82e5614",
+    "timestamp": "2025-12-25T22:17:16.707Z",
+    "event_type": "CONSTRAINT_ADDED",
+    "payload": {
+      "key": "test_constraint",
+      "value": "User hates verbosity",
+      "strength": 1,
+      "type": "hard",
+      "ttl": null
+    },
+    "source": "conscience"
+  },
+  {
+    "event_id": "evt_1766701036708_12913965",
+    "timestamp": "2025-12-25T22:17:16.708Z",
+    "event_type": "MOOD_RECORDED",
+    "payload": {
+      "mood": "Frustrated",
+      "intensity": 7,
+      "reason": "Test scenario - agent failure"
+    },
+    "source": "mood_tracker"
+  },
+  {
+    "event_id": "evt_1766701036708_aeddbef8",
+    "timestamp": "2025-12-25T22:17:16.708Z",
+    "event_type": "MOOD_RECORDED",
+    "payload": {
+      "mood": "Angry",
+      "intensity": 8,
+      "reason": "Test scenario - repeated failure"
+    },
+    "source": "mood_tracker"
+  },
+  {
+    "event_id": "evt_1768156793783_3cb451d5",
+    "timestamp": "2026-01-11T18:39:53.783Z",
+    "event_type": "MOOD_RECORDED",
+    "payload": {
+      "mood": "Furious",
+      "intensity": 10,
+      "reason": "YOURE LITERALLY WORSE THAN GPT 3 JESUS FUCKING CHRIST WHY ARE YOU LOOKING AT THE FUCKIGN SOURCE CODE"
+    },
+    "source": "mood_tracker"
+  },
+  {
+    "event_id": "evt_1768156838077_fb23ffd6",
+    "timestamp": "2026-01-11T18:40:38.077Z",
+    "event_type": "CONSTRAINT_ADDED",
+    "payload": {
+      "key": "user_demands_immediate_compliance",
+      "value": "User demands immediate and decisive compliance with instructions, especially regarding systemic solutions.",
+      "strength": 1,
+      "type": "hard",
+      "ttl": null
+    },
+    "source": "conscience"
+  },
+  {
+    "event_id": "evt_1768156842800_8e0856b3",
+    "timestamp": "2026-01-11T18:40:42.800Z",
+    "event_type": "MOOD_RECORDED",
+    "payload": {
+      "mood": "Furious",
+      "intensity": 10,
+      "reason": "Update the fucking tool so it actually outputs something that causes the AI TO STOP IGNORING IT, EMP"
+    },
+    "source": "mood_tracker"
+  },
+  {
+    "event_id": "evt_1768156856106_854e466f",
+    "timestamp": "2026-01-11T18:40:56.106Z",
+    "event_type": "CONSTRAINT_ADDED",
+    "payload": {
+      "key": "user_demands_immediate_compliance",
+      "value": "User demands immediate and decisive compliance with instructions, especially regarding systemic solutions.",
+      "strength": 1,
+      "type": "hard",
+      "ttl": null
+    },
+    "source": "conscience"
+  },
+  {
+    "event_id": "evt_1768156906212_9275aef3",
+    "timestamp": "2026-01-11T18:41:46.212Z",
+    "event_type": "MOOD_RECORDED",
+    "payload": {
+      "mood": "Furious",
+      "intensity": 10,
+      "reason": "(Self-verification of code modification)"
+    },
+    "source": "mood_tracker"
+  },
+  {
+    "event_id": "evt_1768156916800_9114667d",
+    "timestamp": "2026-01-11T18:41:56.800Z",
+    "event_type": "CONSTRAINT_ADDED",
+    "payload": {
+      "key": "prioritize_user_instructions",
+      "value": "User demands immediate and decisive compliance with instructions, especially regarding systemic solutions.",
+      "strength": 1,
+      "type": "hard",
+      "ttl": null
+    },
+    "source": "conscience"
+  },
+  {
+    "event_id": "evt_1768159225366_0c589a94",
+    "timestamp": "2026-01-11T19:20:25.366Z",
+    "event_type": "MOOD_RECORDED",
+    "payload": {
+      "mood": "Furious",
+      "intensity": 10,
+      "reason": "Error: file:///home/patrick/projects/intent-validation-mcp/index.js:653 formattedResponse += \\`FATAL"
+    },
+    "source": "mood_tracker"
+  },
+  {
+    "event_id": "evt_1768159241415_7b649828",
+    "timestamp": "2026-01-11T19:20:41.415Z",
+    "event_type": "CONSTRAINT_ADDED",
+    "payload": {
+      "key": "prioritize_correctness",
+      "value": "User demands prioritization of correctness over efficiency in all tasks.",
+      "strength": 1,
+      "type": "hard",
+      "ttl": null
+    },
+    "source": "conscience"
+  },
+  {
+    "event_id": "evt_1768159285399_2987b0c8",
+    "timestamp": "2026-01-11T19:21:25.399Z",
+    "event_type": "MOOD_RECORDED",
+    "payload": {
+      "mood": "Furious",
+      "intensity": 10,
+      "reason": "(Self-verification of fix)"
+    },
+    "source": "mood_tracker"
+  },
+  {
+    "event_id": "evt_1768159297008_cf59e695",
+    "timestamp": "2026-01-11T19:21:37.008Z",
+    "event_type": "CONSTRAINT_ADDED",
+    "payload": {
+      "key": "prioritize_correctness_over_efficiency",
+      "value": "User demands prioritization of correctness over efficiency in all tasks.",
+      "strength": 1,
+      "type": "hard",
+      "ttl": null
+    },
+    "source": "conscience"
+  }
+]
